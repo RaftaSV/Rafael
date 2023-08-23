@@ -28,6 +28,7 @@ const App: React.FC = () => {
 };
 
 const rootElement = document.getElementById('root');
+document.title = 'Rafael';
 if (rootElement) {
     createRoot(rootElement).render(
         <React.StrictMode>

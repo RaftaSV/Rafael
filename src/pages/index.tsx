@@ -1,11 +1,11 @@
 import Title from 'components/Atoms/Title';
-import Layout from 'components/Organisms/Layout';
+
+import Layout from 'components/Template/Layout';
 const app = () => {
     return (
         <div>
             <Layout>
-                <Title color='primary' size={600}> Hello World </Title>
-                <h1> Here i will create my portfolio with react and typescript 😎 </h1>
+                <Title size={40}> Here i will create my portfolio with react and typescript 😎 </Title>
             </Layout>
         </div>
     );

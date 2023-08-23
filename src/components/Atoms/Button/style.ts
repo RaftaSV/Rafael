@@ -7,7 +7,6 @@ interface StyleButtonProps {
 export const StyleButton = styled.button<StyleButtonProps>`
   border: 1px solid transparent;
   height: 45px;
-  min-width: 125px;
   border-radius: 12px;
   padding: 0 20px;
   margin-top: 10px;
@@ -16,5 +15,6 @@ export const StyleButton = styled.button<StyleButtonProps>`
   color: ${({ theme }) => theme.colors.text};
   &:hover {
     opacity: 0.8;
+    transition: opacity 0.3s;
   }
 `;

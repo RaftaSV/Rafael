@@ -1,10 +1,9 @@
 const colorsLight = {
-    primary: '#127dff',
+    primary: '#0f4c94',
     secondary: '#ff9800',
-    accent: '#9c27b0',
+    accent: '#147272',
     error: '#f44336',
     npm: '#C43534',
-    // npm2: '#9c4746',
     warning: '#ffeb3b',
     info: '#2196f3',
     success: '#4caf50',
@@ -32,6 +31,8 @@ const colorsLight = {
 const colorsDark = {
     ...colorsLight,
     background: '#0F0F1A',
+    primary: '#609fee',
+    accent: '#5bf1f1',
     text: '#ffffff',
     secondaryText: '#bfc0c0',
     bgCard: 'linear-gradient(180deg, rgba(35, 37, 49, 0.5), rgba(15, 15, 24, 0.5))',

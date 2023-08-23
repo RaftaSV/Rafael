@@ -1,5 +1,5 @@
 import React from 'react';
-const SundFilled = () => {
+const SunFilled = () => {
     return (
         <svg
             stroke="currentColor"
@@ -15,4 +15,4 @@ const SundFilled = () => {
     );
 };
 
-export default SundFilled;
+export default SunFilled;
