@@ -32,8 +32,8 @@ const Navbar = () => {
         <NavbarNav>
             <NavbarStyle size="large" $isScrolling={isScrolling}>
                 <NavbarButton
-                color='transparent'
-                onClick={themeToggle} >
+                    color='transparent'
+                    onClick={themeToggle} >
                     {theme === 'light' ? <MoonFilled /> : <SundFilled />}
                 </NavbarButton>
             </NavbarStyle>
