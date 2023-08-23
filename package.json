@@ -23,16 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,json,html,css,md}\"",
-    "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,json,html,css,md}\"",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,html,css,md}\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -57,5 +48,11 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4",
     "prettier": "^3.0.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   }
 }
