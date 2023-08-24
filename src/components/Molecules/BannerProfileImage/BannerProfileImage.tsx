@@ -29,7 +29,7 @@ const BannerProfileImage = () => {
                         lineHeight={20}
                         align={'justify'}
                         marginLeft={20}
-                        size={25}
+                        size={30}
                     >
                         Bienvenido a mi portafolio, donde podrás conocer más sobre mí y mi trabajo como
                         estudiante de ingeniero en sistemas. Soy un apasionado de la tecnología
