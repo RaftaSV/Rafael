@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import  Container from 'components/Atoms/Conteiner';
 import Button from 'components/Atoms/Button/Button';
+import Github from 'components/Atoms/Icons/github';
+import {mediaQueries} from 'styles/theme';
 
 export const NavbarNav = styled.div`
   display: flex;
@@ -27,9 +29,7 @@ export const NavbarStyle = styled(Container)<{ $isScrolling?: boolean }>`
 
 
 export const NavbarButton = styled(Button)`
- min-width: auto;
- width: 2em;
- margin-right: 10px;
+ width: 1px;
  transition: color 0.3s;
  margin-top: 0;
  &:hover {
