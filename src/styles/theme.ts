@@ -9,9 +9,10 @@ const colorsLight = {
     success: '#4caf50',
     black: '#000',
     white: '#fff',
+    colors: '#675c5c',
     transparent: 'transparent',
     background: '#ffffff',
-    bgCard: 'linear-gradient(177.94deg, #FFFFFF 1.73%, #E9EBF8 76.75%)',
+    bgCard: '#e8e5e5',
     text: '#000000',
     secondaryText: '#404040',
     nav: 'rgba(255, 255, 255, 0.7)',
@@ -35,7 +36,7 @@ const colorsDark = {
     accent: '#5bf1f1',
     text: '#ffffff',
     secondaryText: '#bfc0c0',
-    bgCard: 'linear-gradient(180deg, rgba(35, 37, 49, 0.5), rgba(15, 15, 24, 0.5))',
+    bgCard: 'rgba(0, 0, 1, .5)',
     nav: 'rgba(0, 0, 0, .5)',
     bgModal: '#161616',
     input: '#161616',
@@ -72,4 +73,3 @@ export const mediaQueries = {
     tablet: '@media (min-width: 768px) and (max-width: 991px)',
     desktop: '@media (min-width: 992px)',
 };
-

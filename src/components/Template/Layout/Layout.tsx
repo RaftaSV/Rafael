@@ -1,16 +1,16 @@
-import { Container } from 'react-grid-system';
-
 import Navbar from 'components/Organisms/Navbar';
 import { StyleWrapper } from './style';
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = () => {
     return (
         <StyleWrapper>
             <Navbar />
-            <Container>{children}</Container>
+            <meta
+                name="description"
+                content="Bienvenido a mi portafolio"
+            />
         </StyleWrapper>
     );
 };
 
 export default Layout;
-

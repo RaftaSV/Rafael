@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { createRoot }  from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from 'styles/global';
@@ -33,6 +33,6 @@ if (rootElement) {
     createRoot(rootElement).render(
         <React.StrictMode>
             <App />
-        </React.StrictMode>
+        </React.StrictMode>,
     );
 }

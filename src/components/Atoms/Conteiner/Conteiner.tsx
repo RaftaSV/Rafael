@@ -9,14 +9,7 @@ export interface ContainerProps {
   className?: string;
 }
 
-function Container({
-    children,
-    id,
-    style,
-    className,
-    size = 'small',
-    ...rest
-}: ContainerProps) {
+function Container({ children, id, style, className, size = 'small', ...rest }: ContainerProps) {
     return (
         <StyleContainer id={id} className={className} style={style} $size={size} {...rest}>
             {children}
