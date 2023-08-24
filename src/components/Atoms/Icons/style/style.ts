@@ -7,12 +7,12 @@ export const iconStyle = css`
   height: 2em;
 
   ${mediaQueries.mobile} {
-    width: 1.25em;
-    height: 1.25em;
+    width: 1.7em;
+    height: 1.7em;
   }
 
   ${mediaQueries.tablet} {
-    width: 1.75em;
-    height: 1.75em;
+    width: 1.8em;
+    height: 1.8em;
   }
 `;
