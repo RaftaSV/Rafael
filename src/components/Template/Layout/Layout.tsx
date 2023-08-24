@@ -5,10 +5,6 @@ const Layout = () => {
     return (
         <StyleWrapper>
             <Navbar />
-            <meta
-                name="description"
-                content="Bienvenido a mi portafolio"
-            />
         </StyleWrapper>
     );
 };

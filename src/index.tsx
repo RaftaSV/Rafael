@@ -29,6 +29,10 @@ const App: React.FC = () => {
 
 const rootElement = document.getElementById('root');
 document.title = 'Rafael';
+const metaDescription = '¡Bienvenido a mi portafolio!';
+const meta = document.createElement('meta');
+meta.name = 'description';
+meta.content = metaDescription;
 if (rootElement) {
     createRoot(rootElement).render(
         <React.StrictMode>
