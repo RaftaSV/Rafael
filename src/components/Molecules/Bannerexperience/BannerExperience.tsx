@@ -1,7 +1,7 @@
 import Image from 'components/Atoms/Images';
 import {BannerProfileImageStyle, ContainerStyled, NameAndDescriptionStyled, NameStyled} from './style';
 import Title from 'components/Atoms/Title';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 interface BannerExperienceProps {
     imageUrl?: string;
@@ -12,16 +12,16 @@ const BannerExperience: React.FC<BannerExperienceProps> = (
     {imageUrl= '', experience, description}
 ) => {
     const containerRef = useRef<HTMLDivElement>(null);
-
+    const [hasAnimated, setHasAnimated] = useState(false);
 
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && !hasAnimated) {
                 entry.target.classList.add('animate');
+                setHasAnimated(true);
             }
         });
     };
-
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleIntersection, {
@@ -32,8 +32,7 @@ const BannerExperience: React.FC<BannerExperienceProps> = (
         if (containerRef.current) {
             observer.observe(containerRef.current);
             containerRef.current.addEventListener('animationend', () => {
-                // @ts-ignore
-                containerRef.current.classList.remove('animate');
+                containerRef.current?.classList.remove('animate');
             });
         }
 
@@ -41,12 +40,11 @@ const BannerExperience: React.FC<BannerExperienceProps> = (
             if (containerRef.current) {
                 observer.unobserve(containerRef.current);
                 containerRef.current.removeEventListener('animationend', () => {
-                    // @ts-ignore
-                    containerRef.current.classList.remove('animate');
+                    containerRef.current?.classList.remove('animate');
                 });
             }
         };
-    }, []);
+    }, [hasAnimated]);
 
 
     return (

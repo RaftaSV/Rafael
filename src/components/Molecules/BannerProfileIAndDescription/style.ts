@@ -1,20 +1,26 @@
-import styled, {keyframes}from 'styled-components';
+import styled , {keyframes} from 'styled-components';
 import { mediaQueries } from 'styles/theme';
 
 const moveLeft = keyframes`
     from {
         transform: translateX(100%);
     }
-    to {
-        transform: translateX(0);
-    }
+  to {
+    transform: translateX(0%);
+  }
 `;
+
+
 
 export const ContainerStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+  &.animate {
+    opacity: 1;
+    animation: ${moveLeft} 3s ease-out;
+  }
 `;
 
 export const BannerProfileImageStyle = styled.div`
@@ -34,7 +40,7 @@ export const BannerProfileImageStyle = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: calc(55vh + 30px);
+    height: max-content;
     width: 100%;
     border-radius: 30px;
   }
@@ -46,10 +52,6 @@ export const BannerProfileImageStyle = styled.div`
     height: max-content;
     border-radius: 15px;
     width: 95%;
-  }
-  &.animate {
-    opacity: 1;
-    animation: ${moveLeft} 3s ease-out;
   }
 `;
 

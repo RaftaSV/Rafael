@@ -1,7 +1,7 @@
 import Image from 'components/Atoms/Images';
 import {BannerProfileImageStyle, ContainerStyled, NameAndDescriptionStyled, NameStyled} from './style';
 import Title from 'components/Atoms/Title';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 interface BannerProfileImageProps {
     imageUrl?: string | undefined;
@@ -12,17 +12,17 @@ interface BannerProfileImageProps {
 const BannerProfileImage: React.FC<BannerProfileImageProps> = (
     {imageUrl= '', name, lastName, description}
 ) => {
-    const containerRef = useRef<HTMLDivElement>(null);
-
+    const containerReference = useRef<HTMLDivElement>(null);
+    const [hasAnimated, setHasAnimated] = useState(false);
 
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && !hasAnimated) {
                 entry.target.classList.add('animate');
+                setHasAnimated(true);
             }
         });
     };
-
 
     useEffect(() => {
         const observer = new IntersectionObserver(handleIntersection, {
@@ -30,58 +30,57 @@ const BannerProfileImage: React.FC<BannerProfileImageProps> = (
             threshold: 0.5
         });
 
-        if (containerRef.current) {
-            observer.observe(containerRef.current);
-            containerRef.current.addEventListener('animationend', () => {
-                // @ts-ignore
-                containerRef.current.classList.remove('animate');
+        if (containerReference.current) {
+            observer.observe(containerReference.current);
+            containerReference.current.addEventListener('animationend', () => {
+                containerReference.current?.classList.remove('animate');
             });
         }
 
         return () => {
-            if (containerRef.current) {
-                observer.unobserve(containerRef.current);
-                containerRef.current.removeEventListener('animationend', () => {
-                    // @ts-ignore
-                    containerRef.current.classList.remove('animate');
+            if (containerReference.current) {
+                observer.unobserve(containerReference.current);
+                containerReference.current.removeEventListener('animationend', () => {
+                    containerReference.current?.classList.remove('animate');
                 });
             }
         };
-    }, []);
+    }, [hasAnimated]);
 
 
     return (
-        <BannerProfileImageStyle ref={containerRef}>
-            <Image
-                imageUrl={imageUrl}
-                width={280} height={280} marginLeft={20}/>
-            <NameAndDescriptionStyled>
-                <NameStyled>
-                    <Title color="primary"
-                        size={80}
-                        lineHeight={30}
-                        marginLeft={20}>
-                        {name}
-                    </Title>
+        <ContainerStyled ref={containerReference}>
+            <BannerProfileImageStyle>
+                <Image
+                    imageUrl={imageUrl}
+                    width={280} height={280} marginLeft={20}/>
+                <NameAndDescriptionStyled>
+                    <NameStyled>
+                        <Title color="primary"
+                            size={80}
+                            lineHeight={30}
+                            marginLeft={20}>
+                            {name}
+                        </Title>
+                        <Title
+                            color="accent"
+                            size={80}
+                            marginLeft={20}>
+                            {lastName}
+                        </Title>
+                    </NameStyled>
                     <Title
-                        color="accent"
-                        size={80}
-                        marginLeft={20}>
-                        {lastName}
+                        color={'text'}
+                        lineHeight={20}
+                        align={'justify'}
+                        marginLeft={10}
+                        size={30}
+                    >
+                        {description}
                     </Title>
-                </NameStyled>
-                <Title
-                    color={'text'}
-                    lineHeight={20}
-                    align={'justify'}
-                    marginLeft={10}
-                    size={30}
-                >
-                    {description}
-                </Title>
-            </NameAndDescriptionStyled>
-
-        </BannerProfileImageStyle>
+                </NameAndDescriptionStyled>
+            </BannerProfileImageStyle>
+        </ContainerStyled>
     );
 };
 
