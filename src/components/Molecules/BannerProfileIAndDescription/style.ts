@@ -1,6 +1,14 @@
-import styled from 'styled-components';
+import styled, {keyframes}from 'styled-components';
 import { mediaQueries } from 'styles/theme';
 
+const moveLeft = keyframes`
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+`;
 
 export const ContainerStyled = styled.div`
     display: flex;
@@ -38,6 +46,10 @@ export const BannerProfileImageStyle = styled.div`
     height: max-content;
     border-radius: 15px;
     width: 95%;
+  }
+  &.animate {
+    opacity: 1;
+    animation: ${moveLeft} 5s ease-out;
   }
 `;
 

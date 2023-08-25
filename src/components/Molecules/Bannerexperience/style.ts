@@ -1,5 +1,14 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { mediaQueries } from 'styles/theme';
+
+const moveRight = keyframes`
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+`;
 
 
 export const ContainerStyled = styled.div`
@@ -7,17 +16,21 @@ export const ContainerStyled = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-  ${mediaQueries.desktop} {
-    margin-top: 30px;
-  }
+    ${mediaQueries.desktop} {
+        margin-top: 30px;
+    }
     ${mediaQueries.tablet} {
         margin-top: 30px;
     }
-  ${mediaQueries.mobile} {
-    margin-top: 40px;
-  }
-  
+    ${mediaQueries.mobile} {
+        margin-top: 40px;
+    }
+    &.animate {
+        opacity: 1;
+        animation: ${moveRight} 5s ease-out;
+    }
 `;
+
 
 export const BannerProfileImageStyle = styled.div`
   background-color: ${({ theme }) => theme.colors.bgCard};
