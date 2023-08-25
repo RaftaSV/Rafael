@@ -49,7 +49,7 @@ export const BannerProfileImageStyle = styled.div`
   }
   &.animate {
     opacity: 1;
-    animation: ${moveLeft} 5s ease-out;
+    animation: ${moveLeft} 3s ease-out;
   }
 `;
 

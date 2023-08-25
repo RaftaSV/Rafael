@@ -27,7 +27,7 @@ export const ContainerStyled = styled.div`
     }
     &.animate {
         opacity: 1;
-        animation: ${moveRight} 5s ease-out;
+        animation: ${moveRight} 3s ease-out;
     }
 `;
 
