@@ -17,7 +17,7 @@ export const StyleTitle = styled.h2<StyleTitleProps>`
 
   ${mediaQueries.mobile} {
     /* Estilos para móviles */
-    font-size: ${({ $size }) => $size / 1.72}px;
+    font-size: ${({ $size }) => $size / 1.72  }px;
   }
 
   ${mediaQueries.tablet} {

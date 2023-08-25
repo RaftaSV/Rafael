@@ -5,12 +5,23 @@ import MoonFilled from 'components/Atoms/Icons/moon';
 import SunFilled from 'components/Atoms/Icons/sun';
 import Github from 'components/Atoms/Icons/github';
 import LinkedIn from 'components/Atoms/Icons/linkedIn';
-import BannerNav from '../../Molecules/BanerNav';
+import BannerNav from 'components/Molecules/BanerNav';
 
 import { NavbarStyle, NavbarNav, NavbarButton, NavbarButtonContainer } from './style';
 
 // Componente de la barra de navegación
-const Navbar = () => {
+interface NavbarProps {
+    imageUrl?: string;
+    name?: string;
+    lastName?: string;
+
+}
+const Navbar: React.FC<NavbarProps> = (
+    {imageUrl= '',
+        name,
+        lastName
+    }
+) => {
     // Hook de tema
     const { theme, themeToggle } = useAppTheme();
     const [isScrolling, setIsScrolling] = useState(false);
@@ -45,7 +56,9 @@ const Navbar = () => {
     return (
         <NavbarNav>
             <NavbarStyle size="large" $isScrolling={isScrolling}>
-                <BannerNav />
+                <BannerNav imageUrl={imageUrl}
+                    name={name} lastName={lastName}
+                />
                 <NavbarButtonContainer>
                     <NavbarButton color="transparent" onClick={github}>
                         <Github />

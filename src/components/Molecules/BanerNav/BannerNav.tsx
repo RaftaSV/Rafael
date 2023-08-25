@@ -1,16 +1,28 @@
+import React from 'react';
 import Image from 'components/Atoms/Images';
-import profile from './Images/profile.png';
 import Title from 'components/Atoms/Title';
-
 import { BannerNavStyled, NameStyled } from './style';
 
-const BannerNav = () => {
+
+interface BannerNavProps {
+    imageUrl?: string | undefined;
+    name?: string;
+    lastName?: string;
+
+}
+const BannerNav: React.FC<BannerNavProps> = (
+    {imageUrl= '', name, lastName
+    }
+) => {
+
     return (
         <BannerNavStyled>
-            <Image imageUrl={profile} width={40} height={40} />
-            <Title color="primary">Rafael</Title>
+            <Image imageUrl={imageUrl} width={40} height={40} />
+            <Title color="primary"
+                marginLeft={10}
+            >{name}</Title>
             <NameStyled>
-                <Title color="accent">Gonzalez</Title>
+                <Title color="accent">{lastName}</Title>
             </NameStyled>
         </BannerNavStyled>
     );
