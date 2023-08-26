@@ -5,7 +5,7 @@ import coding from 'assets/coding.gif';
 import BannerExperience from 'components/Molecules/Bannerexperience';
 const app = () => {
     const name = 'Rafael';
-    const lastName = 'Gonzalez';
+    const lastName = 'González';
     const description = 'Soy un desarrollador de software con experiencia en el ' +
         'desarrollo de aplicaciones web y escritorio. Me apasiona el desarrollo de software ' +
         'y la tecnología en general. Me gusta aprender nuevas tecnologías y aplicarlas en mis ' +
