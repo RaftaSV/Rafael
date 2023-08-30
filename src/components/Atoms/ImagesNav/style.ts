@@ -18,11 +18,11 @@ export const CircleImage = styled.img<CircleImageProps>`
     height: ${({ $height }) => $height}px;
   }
   ${mediaQueries.tablet} {
-    width: ${({ $width }) => $width * 0.5}px;
-    height: ${({ $height }) => $height * 0.5}px;
+    width: ${({ $width }) => $width * 0.6}px;
+    height: ${({ $height }) => $height * 0.6}px;
   }
   ${mediaQueries.mobile} {
-    width: ${({ $width }) => $width * 0.7}px;
-    height: ${({ $height }) => $height * 0.7}px;
+    width: ${({ $width }) => $width * 0.9}px;
+    height: ${({ $height }) => $height * 0.9}px;
   }
 `;

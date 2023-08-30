@@ -3,21 +3,14 @@ import { StyleWrapper } from './style';
 import React from 'react';
 
 interface LayoutProps {
-    urlImage?: string;
-    name?: string;
-    lastName?: string;
+  urlImage?: string;
+  name?: string;
+  lastName?: string;
 }
-const Layout : React.FC<LayoutProps> = (
-    {urlImage = '',
-        name,
-        lastName}
-) => {
+const Layout: React.FC<LayoutProps> = ({ urlImage = '', name, lastName }) => {
     return (
         <StyleWrapper>
-            <Navbar imageUrl={urlImage}
-                name={name}
-                lastName={lastName}
-            />
+            <Navbar imageUrl={urlImage} name={name} lastName={lastName} />
         </StyleWrapper>
     );
 };

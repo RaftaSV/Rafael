@@ -20,13 +20,13 @@ export const NavbarStyle = styled(Container)<{ $isScrolling?: boolean }>`
   transition:
     background-color 0.1s ease-in-out,
     backdrop-filter 0.1s ease-in-out;
-  height: 90px;
+  height: 80px;
   align-items: center;
   display: flex;
   justify-content: space-between;
   z-index: ${({ theme }) => theme.zIndex.nav};
-  background-color: ${({ $isScrolling, theme }) => ($isScrolling ? theme.colors.nav : 'transparent')};
-  backdrop-filter: ${({ $isScrolling }) => ($isScrolling ? 'blur(10px)' : 'none')};
+  background-color: ${({ $isScrolling, theme }) => ($isScrolling ? theme.colors.nav : theme.colors.navTransparent)};
+  backdrop-filter: ${({ $isScrolling }) => ($isScrolling ? 'blur(8px)' : 'none')};
 `;
 
 export const NavbarButton = styled(Button)`

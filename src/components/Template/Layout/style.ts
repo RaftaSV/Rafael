@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import { mediaQueries } from 'styles/theme';
 
 export const StyleWrapper = styled.div`
   max-width: 100%;
-  margin-top: 100px;
 `;

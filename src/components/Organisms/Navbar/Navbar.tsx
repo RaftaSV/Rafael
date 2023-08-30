@@ -11,17 +11,11 @@ import { NavbarStyle, NavbarNav, NavbarButton, NavbarButtonContainer } from './s
 
 // Componente de la barra de navegación
 interface NavbarProps {
-    imageUrl?: string;
-    name?: string;
-    lastName?: string;
-
+  imageUrl?: string;
+  name?: string;
+  lastName?: string;
 }
-const Navbar: React.FC<NavbarProps> = (
-    {imageUrl= '',
-        name,
-        lastName
-    }
-) => {
+const Navbar: React.FC<NavbarProps> = ({ imageUrl = '', name, lastName }) => {
     // Hook de tema
     const { theme, themeToggle } = useAppTheme();
     const [isScrolling, setIsScrolling] = useState(false);
@@ -56,9 +50,7 @@ const Navbar: React.FC<NavbarProps> = (
     return (
         <NavbarNav>
             <NavbarStyle size="large" $isScrolling={isScrolling}>
-                <BannerNav imageUrl={imageUrl}
-                    name={name} lastName={lastName}
-                />
+                <BannerNav imageUrl={imageUrl} name={name} lastName={lastName} />
                 <NavbarButtonContainer>
                     <NavbarButton color="transparent" onClick={github}>
                         <Github />

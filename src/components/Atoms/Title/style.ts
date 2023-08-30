@@ -17,7 +17,7 @@ export const StyleTitle = styled.h2<StyleTitleProps>`
 
   ${mediaQueries.mobile} {
     /* Estilos para móviles */
-    font-size: ${({ $size }) => $size / 1.72  }px;
+    font-size: ${({ $size }) => $size / 1.72}px;
   }
 
   ${mediaQueries.tablet} {
@@ -25,6 +25,6 @@ export const StyleTitle = styled.h2<StyleTitleProps>`
     font-size: ${({ $size }) => $size / 1.5}px;
   }
   ${mediaQueries.desktop} {
-    line-height: ${({ $lineHeight }) => $lineHeight*1.4}px;
+    line-height: ${({ $lineHeight }) => $lineHeight * 1.4}px;
   }
 `;
