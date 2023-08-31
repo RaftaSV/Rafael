@@ -5,7 +5,8 @@ export const Container = styled.div `
     display: flex;
     align-items: center;
     justify-content: center;
-  margin-top: 60px;
+   margin-top: 60px; 
+  flex-direction: column;
 `;
 
 export const StyleWrapper = styled.div `
