@@ -27,7 +27,7 @@ export const BannerProfileImageStyle = styled.div`
     justify-content: center;
     margin-top: 40px;
     align-items: center;
-    height: 400px;
+    height: 460px;
     width: 95%;
     border-radius: 40px;
     padding-right: 20px;
@@ -38,8 +38,8 @@ export const BannerProfileImageStyle = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 400px;
     border-radius: 30px;
-    height: calc(55vh + 30px);
   }
   ${mediaQueries.mobile} {
     display: flex;
