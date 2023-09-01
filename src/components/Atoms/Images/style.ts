@@ -25,4 +25,5 @@ export const CircleImage = styled.img<CircleImageProps>`
     width: ${({ $width }) => $width * 0.7}px;
     height: ${({ $height }) => $height * 0.7}px;
   }
+  
 `;

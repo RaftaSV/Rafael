@@ -4,7 +4,7 @@ import Profile from 'assets/profile.png';
 import coverImage from 'assets/coverImage.jpg';
 import Layout from 'components/Template/Layout';
 import navBarImage from 'assets/navBarImage.jpg';
-import AbautMeBanner from 'components/Molecules/AboutMe';
+import AboutMeBanner from 'components/Molecules/AboutMe';
 import HeaderPage from 'components/Molecules/HeaderPage';
 import ProgressBarCard from 'components/Molecules/ProgressBarCard';
 import JS from 'assets/JS.png';
@@ -21,15 +21,12 @@ const app = () => {
     const name = 'Rafael';
     const lastName = 'Gonzalez';
     const description =
-        'Soy un desarrollador fullstack, estudiante de 5to año de ingenieria en sistemas con experiencia en el ' +
-        'desarrollo de aplicaciones web y escritorio. Me apasiona el desarrollo de software ' +
-        'y la tecnología en general. Me gusta aprender nuevas tecnologías y aplicarlas en mis ' +
-        'proyectos. Me considero una persona responsable, creativo, con iniciativa y puntualidad,' +
-        ' asumo con agrado los retos y metas que su organización me pudiera plantear; con buen manejo de ' +
-        'relaciones interpersonales, facilidad para trabajar en equipo, en condiciones de alta presión, ' +
-        'así como para resolver problemas eficientemente y lograr las metas trazadas por la empresa y' +
-        ' mi grupo de trabajo.';
-    const experience = 'Acerca de mi';
+        'Soy un ingeniero en sistemas en formación quinto año en curso y desarrollador fullstack jr con experiencia ' +
+        'en aplicaciones web y escritorio. Me entusiasma el desarrollo de software y la innovación ' +
+        'tecnológica. Aprendo y aplico nuevas tecnologías en mis proyectos. Tengo habilidades para ' +
+        'trabajar en equipo, bajo presión y con responsabilidad. Busco asumir retos y metas que me ' +
+        'permitan crecer profesionalmente y aportar valor a la organización.';
+    const experience = 'Mi perfil en desarrollo';
     interface Skill {
         skill: string;
         width: number;
@@ -48,7 +45,7 @@ const app = () => {
         },
         {
             skill: 'JavaScript',
-            width: 80,
+            width: 70,
             image: JS
         },
         {
@@ -93,7 +90,7 @@ const app = () => {
                 description={description}
                 coverImage={coverImage}
             />
-            <AbautMeBanner imageUrl={coding} experience={experience} description={description} />
+            <AboutMeBanner imageUrl={coding} experience={experience} description={description} />
             <Container>
                 <Row>
                     {skills.map((skill, index) => (

@@ -10,7 +10,7 @@ interface BannerExperienceProps {
   experience?: string;
   description?: string;
 }
-const AbautMeBanner: React.FC<BannerExperienceProps> = ({ imageUrl = '', experience, description }) => {
+const AboutMeBanner: React.FC<BannerExperienceProps> = ({ imageUrl = '', experience, description }) => {
     useEffect(() => {
         AOS.init({
             // Configuración global para ajustar el comportamiento de las animaciones
@@ -24,8 +24,8 @@ const AbautMeBanner: React.FC<BannerExperienceProps> = ({ imageUrl = '', experie
 
     }, []);
     return (
-        <ContainerStyled >
-            <BannerProfileImageStyle  data-aos="zoom-in">
+        <ContainerStyled data-aos="zoom-in">
+            <BannerProfileImageStyle  >
                 <NameAndDescriptionStyled>
                     <NameStyled>
                         <Title color="primary" size={80} marginLeft={20}>
@@ -42,4 +42,4 @@ const AbautMeBanner: React.FC<BannerExperienceProps> = ({ imageUrl = '', experie
     );
 };
 
-export default AbautMeBanner;
+export default AboutMeBanner;

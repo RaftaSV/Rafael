@@ -69,9 +69,8 @@ export const themeDark = {
     ...themeLight,
     colors: colorsDark,
 };
-
 export const mediaQueries = {
-    mobile: '@media (max-width: 767px)',
-    tablet: '@media (min-width: 768px) and (max-width: 991px)',
-    desktop: '@media (min-width: 992px)',
+    mobile: '@media screen and (max-width: 767px)',
+    tablet: '@media screen and (min-width: 768px) and (max-width: 1024px)',
+    desktop: '@media screen and (min-width: 1025px)',
 };

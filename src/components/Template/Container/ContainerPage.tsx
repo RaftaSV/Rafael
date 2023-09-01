@@ -12,10 +12,10 @@ interface ContainerProps {
 const ContainerPage: React.FC<ContainerProps> = ({ children }) => {
     return (
         <Container>
-            <Title color="primary" size={80} marginLeft={20}>
-            Experiencias
-            </Title>
             <StyleWrapper>
+                <Title color="primary" size={80} marginLeft={20}>
+                    Habilidades
+                </Title>
                 {children}
             </StyleWrapper>
 
