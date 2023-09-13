@@ -9,6 +9,7 @@ interface TitleProps {
   color?: ColorType;
   marginLeft?: number;
   align?: string;
+  htmlTag?: string;
 }
 
 const Title: React.FC<TitleProps> = ({
@@ -18,9 +19,12 @@ const Title: React.FC<TitleProps> = ({
     color = 'text',
     marginLeft = 0,
     align = 'center',
+    htmlTag = 'h1',
 }) => {
     return (
-        <StyleTitle $size={size} $lineHeight={lineHeight} $color={color} $marginLeft={marginLeft} $align={align}>
+        <StyleTitle $size={size} $lineHeight={lineHeight} $color={color} $marginLeft={marginLeft} $align={align}
+            as={htmlTag}
+        >
             {children}
         </StyleTitle>
     );

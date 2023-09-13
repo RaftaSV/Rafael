@@ -25,14 +25,16 @@ const AboutMeBanner: React.FC<BannerExperienceProps> = ({ imageUrl = '', experie
     }, []);
     return (
         <ContainerStyled data-aos="zoom-in">
-            <BannerProfileImageStyle  >
+            <BannerProfileImageStyle>
                 <NameAndDescriptionStyled>
                     <NameStyled>
                         <Title color="primary" size={80} marginLeft={20}>
                             {experience}
                         </Title>
                     </NameStyled>
-                    <Title color={'text'} lineHeight={20} align={'justify'} marginLeft={20} size={30}>
+                    <Title color={'text'} lineHeight={20} align={'justify'} marginLeft={20} size={30}
+                        htmlTag={'h1'}
+                    >
                         {description}
                     </Title>
                 </NameAndDescriptionStyled>
